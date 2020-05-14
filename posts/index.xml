@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>rust404的个人博客</title>
-    <link>https://rust404.github.io/</link>
-    <description>Recent content on rust404的个人博客</description>
+    <title>Posts on rust404的个人博客</title>
+    <link>https://rust404.github.io/posts/</link>
+    <description>Recent content in Posts on rust404的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <lastBuildDate>Thu, 14 May 2020 09:57:21 +0800</lastBuildDate>
     
-	<atom:link href="https://rust404.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rust404.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
