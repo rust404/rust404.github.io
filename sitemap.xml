@@ -18,7 +18,11 @@
   </url>
   
   <url>
-    <loc>https://rust404.github.io/categories/</loc>
+    <loc>https://rust404.github.io/blog/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rust404.github.io/series/</loc>
   </url>
   
   <url>
