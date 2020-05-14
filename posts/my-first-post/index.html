@@ -5,7 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="My first blog function sayHi() { console.log(&amp;#39;hi&amp;#39;) } " />
+<meta name="description" content="Hugo是由Go语言实现的一款静态博客生成器，具备简单、易用、高效、易扩展、快速部署的特点，本篇文章将带你一步步搭建一个基于github pages的个人博客。
+安装hugo hugo官网提供了多种的安装方式，这里仅仅提供二进制安装及Homebrew的安装方法。
+二进制安装 通过hugo的github release页面下载自己平台的对应二进制文件，最好配置一下自己平台的PATH环境变量以便于全局使用
+Homebrew 对于macOS用户，可以通过以下命令行完成安装
+$ brew install hugo 安装完毕后，可以通过执行hugo version来验证是否安装成功，如果成功出现对应版本号则说明安装成功。
+生成站点 通过执行以下命令，即可在指定目录初始化生成一个站点
+$ hugo new site blog 上述命令的blog可以自定义为任意的目录，执行成功后将会得到以下的目录结构
+archetypes config.toml content data layouts static themes 添加主题 hugo的主题页面里面的主题非常丰富，这边以本博客使用的hello-friend-ng 为例子，展示如何安装主题
+$ cd blog $ git init $ git clone https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng $ git submodule add https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng 其中第四行的意思是将主题对应仓库当作子模块，从当前仓库中独立，当前仓库并不干预这个子仓库的内容
+配置主题 将config.toml替换为以下内容，其中博客名字等都可在配置文件中自定义，这里就不加赘述
+baseurl = &amp;quot;localhost&amp;quot; title = &amp;quot;My Blog&amp;quot; languageCode = &amp;quot;en-us&amp;quot; theme = &amp;quot;hello-friend-ng&amp;quot; paginate = 10 [params] dateform = &amp;quot;Jan 2, 2006&amp;quot; dateformShort = &amp;quot;Jan 2&amp;quot; dateformNum = &amp;quot;2006-01-02&amp;quot; dateformNumTime = &amp;quot;2006-01-02 15:04 -0700&amp;quot; # Subtitle for home homeSubtitle = &amp;quot;A simple and beautiful blog&amp;quot; # Set disableReadOtherPosts to true in order to hide the links to other posts." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -14,7 +24,7 @@
 
     <title>
         
-            My First Post :: rust404的个人博客  — A simple theme for Hugo
+            如何使用hugo搭建个人博客 :: rust404的个人博客  — A simple theme for Hugo
         
     </title>
 
@@ -32,11 +42,21 @@
 
 
 
-<meta itemprop="name" content="My First Post">
-<meta itemprop="description" content="My first blog function sayHi() { console.log(&#39;hi&#39;) } ">
+<meta itemprop="name" content="如何使用hugo搭建个人博客">
+<meta itemprop="description" content="Hugo是由Go语言实现的一款静态博客生成器，具备简单、易用、高效、易扩展、快速部署的特点，本篇文章将带你一步步搭建一个基于github pages的个人博客。
+安装hugo hugo官网提供了多种的安装方式，这里仅仅提供二进制安装及Homebrew的安装方法。
+二进制安装 通过hugo的github release页面下载自己平台的对应二进制文件，最好配置一下自己平台的PATH环境变量以便于全局使用
+Homebrew 对于macOS用户，可以通过以下命令行完成安装
+$ brew install hugo 安装完毕后，可以通过执行hugo version来验证是否安装成功，如果成功出现对应版本号则说明安装成功。
+生成站点 通过执行以下命令，即可在指定目录初始化生成一个站点
+$ hugo new site blog 上述命令的blog可以自定义为任意的目录，执行成功后将会得到以下的目录结构
+archetypes config.toml content data layouts static themes 添加主题 hugo的主题页面里面的主题非常丰富，这边以本博客使用的hello-friend-ng 为例子，展示如何安装主题
+$ cd blog $ git init $ git clone https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng $ git submodule add https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng 其中第四行的意思是将主题对应仓库当作子模块，从当前仓库中独立，当前仓库并不干预这个子仓库的内容
+配置主题 将config.toml替换为以下内容，其中博客名字等都可在配置文件中自定义，这里就不加赘述
+baseurl = &quot;localhost&quot; title = &quot;My Blog&quot; languageCode = &quot;en-us&quot; theme = &quot;hello-friend-ng&quot; paginate = 10 [params] dateform = &quot;Jan 2, 2006&quot; dateformShort = &quot;Jan 2&quot; dateformNum = &quot;2006-01-02&quot; dateformNumTime = &quot;2006-01-02 15:04 -0700&quot; # Subtitle for home homeSubtitle = &quot;A simple and beautiful blog&quot; # Set disableReadOtherPosts to true in order to hide the links to other posts.">
 <meta itemprop="datePublished" content="2020-05-14T09:57:21&#43;08:00" />
 <meta itemprop="dateModified" content="2020-05-14T09:57:21&#43;08:00" />
-<meta itemprop="wordCount" content="8">
+<meta itemprop="wordCount" content="310">
 <meta itemprop="image" content="https://rust404.github.io/"/>
 
 
@@ -45,13 +65,33 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://rust404.github.io/"/>
 
-<meta name="twitter:title" content="My First Post"/>
-<meta name="twitter:description" content="My first blog function sayHi() { console.log(&#39;hi&#39;) } "/>
+<meta name="twitter:title" content="如何使用hugo搭建个人博客"/>
+<meta name="twitter:description" content="Hugo是由Go语言实现的一款静态博客生成器，具备简单、易用、高效、易扩展、快速部署的特点，本篇文章将带你一步步搭建一个基于github pages的个人博客。
+安装hugo hugo官网提供了多种的安装方式，这里仅仅提供二进制安装及Homebrew的安装方法。
+二进制安装 通过hugo的github release页面下载自己平台的对应二进制文件，最好配置一下自己平台的PATH环境变量以便于全局使用
+Homebrew 对于macOS用户，可以通过以下命令行完成安装
+$ brew install hugo 安装完毕后，可以通过执行hugo version来验证是否安装成功，如果成功出现对应版本号则说明安装成功。
+生成站点 通过执行以下命令，即可在指定目录初始化生成一个站点
+$ hugo new site blog 上述命令的blog可以自定义为任意的目录，执行成功后将会得到以下的目录结构
+archetypes config.toml content data layouts static themes 添加主题 hugo的主题页面里面的主题非常丰富，这边以本博客使用的hello-friend-ng 为例子，展示如何安装主题
+$ cd blog $ git init $ git clone https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng $ git submodule add https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng 其中第四行的意思是将主题对应仓库当作子模块，从当前仓库中独立，当前仓库并不干预这个子仓库的内容
+配置主题 将config.toml替换为以下内容，其中博客名字等都可在配置文件中自定义，这里就不加赘述
+baseurl = &quot;localhost&quot; title = &quot;My Blog&quot; languageCode = &quot;en-us&quot; theme = &quot;hello-friend-ng&quot; paginate = 10 [params] dateform = &quot;Jan 2, 2006&quot; dateformShort = &quot;Jan 2&quot; dateformNum = &quot;2006-01-02&quot; dateformNumTime = &quot;2006-01-02 15:04 -0700&quot; # Subtitle for home homeSubtitle = &quot;A simple and beautiful blog&quot; # Set disableReadOtherPosts to true in order to hide the links to other posts."/>
 
 
 
-    <meta property="og:title" content="My First Post" />
-<meta property="og:description" content="My first blog function sayHi() { console.log(&#39;hi&#39;) } " />
+    <meta property="og:title" content="如何使用hugo搭建个人博客" />
+<meta property="og:description" content="Hugo是由Go语言实现的一款静态博客生成器，具备简单、易用、高效、易扩展、快速部署的特点，本篇文章将带你一步步搭建一个基于github pages的个人博客。
+安装hugo hugo官网提供了多种的安装方式，这里仅仅提供二进制安装及Homebrew的安装方法。
+二进制安装 通过hugo的github release页面下载自己平台的对应二进制文件，最好配置一下自己平台的PATH环境变量以便于全局使用
+Homebrew 对于macOS用户，可以通过以下命令行完成安装
+$ brew install hugo 安装完毕后，可以通过执行hugo version来验证是否安装成功，如果成功出现对应版本号则说明安装成功。
+生成站点 通过执行以下命令，即可在指定目录初始化生成一个站点
+$ hugo new site blog 上述命令的blog可以自定义为任意的目录，执行成功后将会得到以下的目录结构
+archetypes config.toml content data layouts static themes 添加主题 hugo的主题页面里面的主题非常丰富，这边以本博客使用的hello-friend-ng 为例子，展示如何安装主题
+$ cd blog $ git init $ git clone https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng $ git submodule add https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng 其中第四行的意思是将主题对应仓库当作子模块，从当前仓库中独立，当前仓库并不干预这个子仓库的内容
+配置主题 将config.toml替换为以下内容，其中博客名字等都可在配置文件中自定义，这里就不加赘述
+baseurl = &quot;localhost&quot; title = &quot;My Blog&quot; languageCode = &quot;en-us&quot; theme = &quot;hello-friend-ng&quot; paginate = 10 [params] dateform = &quot;Jan 2, 2006&quot; dateformShort = &quot;Jan 2&quot; dateformNum = &quot;2006-01-02&quot; dateformNumTime = &quot;2006-01-02 15:04 -0700&quot; # Subtitle for home homeSubtitle = &quot;A simple and beautiful blog&quot; # Set disableReadOtherPosts to true in order to hide the links to other posts." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rust404.github.io/posts/my-first-post/" />
 <meta property="og:image" content="https://rust404.github.io/"/>
@@ -124,7 +164,7 @@
     <main class="post">
 
         <div class="post-info">
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>One minute
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>2 minutes
 
             
 
@@ -133,17 +173,128 @@
 
         <article>
             <h1 class="post-title">
-                <a href="https://rust404.github.io/posts/my-first-post/">My First Post</a>
+                <a href="https://rust404.github.io/posts/my-first-post/">如何使用hugo搭建个人博客</a>
             </h1>
 
             
 
             <div class="post-content">
-                <h1 id="my-first-blog">My first blog</h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sayHi</span>() {
-    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;hi&#39;</span>)
-}
-</code></pre></div>
+                <p>Hugo是由Go语言实现的一款静态博客生成器，具备简单、易用、高效、易扩展、快速部署的特点，本篇文章将带你一步步搭建一个基于github pages的个人博客。</p>
+<h2 id="安装hugo">安装hugo</h2>
+<p>hugo<a href="https://gohugo.io/getting-started/installing/">官网</a>提供了多种的安装方式，这里仅仅提供二进制安装及Homebrew的安装方法。</p>
+<h3 id="二进制安装">二进制安装</h3>
+<p>通过hugo的github <a href="https://github.com/gohugoio/hugo/releases">release</a>页面下载自己平台的对应二进制文件，最好配置一下自己平台的<code>PATH</code>环境变量以便于全局使用</p>
+<h3 id="homebrew">Homebrew</h3>
+<p>对于macOS用户，可以通过以下命令行完成安装</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ brew install hugo
+</code></pre></div><p>安装完毕后，可以通过执行<code>hugo version</code>来验证是否安装成功，如果成功出现对应版本号则说明安装成功。</p>
+<h2 id="生成站点">生成站点</h2>
+<p>通过执行以下命令，即可在指定目录初始化生成一个站点</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hugo new site blog
+</code></pre></div><p>上述命令的<code>blog</code>可以自定义为任意的目录，执行成功后将会得到以下的目录结构</p>
+<pre><code>archetypes
+config.toml
+content
+data
+layouts
+static
+themes
+</code></pre><h2 id="添加主题">添加主题</h2>
+<p>hugo的<a href="https://themes.gohugo.io/">主题页面</a>里面的主题非常丰富，这边以本博客使用的<a href="https://themes.gohugo.io/hugo-theme-hello-friend-ng/">hello-friend-ng
+</a>为例子，展示如何安装主题</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd blog
+$ git init
+$ git clone https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng
+$ git submodule add https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng
+</code></pre></div><p>其中第四行的意思是将主题对应仓库当作子模块，从当前仓库中独立，当前仓库并不干预这个子仓库的内容</p>
+<h3 id="配置主题">配置主题</h3>
+<p>将<code>config.toml</code>替换为以下内容，其中博客名字等都可在配置文件中自定义，这里就不加赘述</p>
+<pre><code>baseurl      = &quot;localhost&quot;
+title        = &quot;My Blog&quot;
+languageCode = &quot;en-us&quot;
+theme        = &quot;hello-friend-ng&quot;
+paginate     = 10
+
+[params]
+  dateform        = &quot;Jan 2, 2006&quot;
+  dateformShort   = &quot;Jan 2&quot;
+  dateformNum     = &quot;2006-01-02&quot;
+  dateformNumTime = &quot;2006-01-02 15:04 -0700&quot;
+
+  # Subtitle for home
+  homeSubtitle = &quot;A simple and beautiful blog&quot;
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
+
+  # Metadata mostly used in document's head
+  description = &quot;My new homepage or blog&quot;
+  keywords = &quot;homepage, blog&quot;
+  images = [&quot;&quot;]
+
+  # Directory name of your blog content (default is `content/posts`)
+  contentTypeName = &quot;posts&quot;
+
+  # Default theme &quot;light&quot; or &quot;dark&quot;
+  defaultTheme = &quot;dark&quot;
+
+[taxonomies]
+    category = &quot;blog&quot;
+    tag      = &quot;tags&quot;
+    series   = &quot;series&quot;
+
+[languages]
+  [languages.en]
+    title = &quot;Hello Friend NG&quot;
+    subtitle = &quot;A simple theme for Hugo&quot;
+    keywords = &quot;&quot;
+    copyright = '&lt;a href=&quot;https://creativecommons.org/licenses/by-nc/4.0/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CC BY-NC 4.0&lt;/a&gt;'
+    readOtherPosts = &quot;Read other posts&quot;
+
+    [languages.en.params.logo]
+      logoText = &quot;hello friend ng&quot;
+      logoHomeLink = &quot;/&quot;
+    # or
+    #
+    # path = &quot;/img/your-example-logo.svg&quot;
+    # alt = &quot;Your example logo alt text&quot;
+
+  # And you can even create generic menu
+  [[menu.main]]
+    identifier = &quot;blog&quot;
+    name       = &quot;Blog&quot;
+    url        = &quot;/posts&quot;
+</code></pre><h2 id="生成博客">生成博客</h2>
+<p>执行以下命令即可创建一篇新的博客文章，其中文件名可以自行决定</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hugo create posts/first-blog.md
+</code></pre></div><p>打开新的博文会得到以以下内容开头的文章：</p>
+<pre><code>---
+title: &quot;first blog&quot;
+date: 2020-05-14T08:47:11+01:00
+draft: true
+---
+</code></pre><p>不要将其删除，否则博客列表将不会显示标题等元信息</p>
+<h2 id="启动hugo的开发服务器">启动hugo的开发服务器</h2>
+<pre><code>$ hugo server -D
+</code></pre><p>执行上述命令会启动一个服务器，根据命令行提示进入<code>http://localhost:1313</code>将会显示博客页面，本地编辑博客内容会实时反映到页面上，于是可以愉快的写博文了</p>
+<h2 id="构建并部署到github-pages">构建并部署到github pages</h2>
+<h3 id="创建github-pages的仓库">创建github pages的仓库</h3>
+<p>github pages是github提供的网页寄存服务，它会提供一个域名([用户名].github.io)供用户访问静态网页，下面是创建github pages的步骤</p>
+<p>我们在自己的github账户上新建一个名为<code>[用户名].github.io</code>的仓库，如我的就是<code>rust404.github.io</code></p>
+<h3 id="修改configtoml文件">修改config.toml文件</h3>
+<p>将配置文件中<code>baseurl</code>这一项变更为自己对应github pages的域名，如我的就是<code>https://rust404.github.io/</code>，这一步必须执行，否则资源文件将会访问出错</p>
+<h3 id="构建并提交">构建并提交</h3>
+<p>执行以下命令</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hugo -D
+</code></pre></div><p>执行完毕后得到<code>public</code>目录，这个目录即我们需要提交到远程仓库（[用户名].github.io）的目录，以我的博客为例，提交过程如下：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd public
+$ git init
+$ git add .
+$ git commit -m <span style="color:#e6db74">&#34;第一次提交&#34;</span>
+$ git remote add origin git@github.com:rust404/rust404.github.io.git <span style="color:#75715e">## 这部分需要改为自己的仓库</span>
+$ git push -u origin master
+</code></pre></div><p>执行完毕后，在<code>[用户名].github.io</code>即可看见自己刚刚写的博客了</p>
+
             </div>
         </article>
 
@@ -151,7 +302,7 @@
 
         <div class="post-info">
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>8 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>310 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-05-14 09:57 &#43;0800</p>
         </div>
